@@ -20,7 +20,7 @@ To get a local copy up and running follow these simple example steps.
 get install [ruby](https://www.ruby-lang.org/es/documentation/installation/)
 ### Setup
 
-Clone this [repository](https://github.com/Dangelo-JAN/interactive-ruby-ui.git
+Clone this [repository](https://github.com/Dangelo-JAN/interactive-ruby-ui.git)
 
 ### Usage
 
