@@ -24,13 +24,7 @@ Clone this [repository](https://github.com/Dangelo-JAN/interactive-ruby-ui.git)
 
 ### Usage
 
-With the interactive ruby terminal run:
-`person = Person.new(22, 'maximilianus')
-  person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  capitalizedTrimmedPerson.correct_name`
+With the interactive ruby terminal
 
 ## Authors
 
