@@ -1,4 +1,6 @@
-class Person
+require_relative 'nameable'
+
+class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age
 
@@ -19,5 +21,9 @@ class Person
     return true if @age >= 18
 
     false
+  end
+
+  def correct_name
+    @name
   end
 end
