@@ -1,7 +1,6 @@
 require_relative 'teacher'
 require_relative 'student'
 require_relative 'rental'
-require_relative 'main'
 
 class App
   attr_accessor :books, :people, :rentals
@@ -16,13 +15,11 @@ class App
   def book_list
     puts 'Books list'
     @books.each { |book| puts "Title: \"#{book.title}\", Author: #{book.author}" }
-    main.main
   end
 
   def people_list
     puts 'People list'
     @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
-    main.main
   end
 
   def create_person
@@ -36,7 +33,6 @@ class App
       create_person
     end
     puts 'Person created successfully'
-    main.main
   end
 
   def create_student
@@ -69,7 +65,6 @@ class App
     book = Book.new(title, author)
     books << book unless @books.include?(book)
     puts 'Book created successfully'
-    main.main
   end
 
   def create_rental
@@ -90,7 +85,6 @@ class App
     rental = Rental.new(rental_date, books[book_selection], people[person_selection])
     rentals << rental
     puts 'Rental created successfully'
-    main.main
   end
 
   def rentals_from_person_id
@@ -105,6 +99,5 @@ class App
     person.rentals.each do |rental|
       puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}"
     end
-    main.main
   end
 end
