@@ -1,4 +1,4 @@
-require 'app'
+require_relative 'app'
 
 def main # rubocop:disable Metrics/CyclomaticComplexity, Metrics/MethodLength
   app = App.new
@@ -6,8 +6,8 @@ def main # rubocop:disable Metrics/CyclomaticComplexity, Metrics/MethodLength
   status = true
 
   while status
-    puts 'Welcome to School Library App/n/n'
-
+    puts 'Welcome to School Library App'
+    puts ''
     puts 'Please choose an option enterin a number:'
     puts '1 - List all books'
     puts '2 - List all people'

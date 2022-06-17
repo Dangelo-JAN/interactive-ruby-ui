@@ -26,8 +26,8 @@ class App
     puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     person_type = gets.chomp.to_i
     case person_type
-    when '1' then create_student
-    when '2' then create_teacher
+    when 1 then create_student
+    when 2 then create_teacher
     else
       puts 'Invalid selection'
       create_person
@@ -41,9 +41,9 @@ class App
     puts 'Name: '
     name = gets.chomp
     puts 'Do you have permission[Y/N]: '
-    parent_permission = gets.chomp
+    parent_permission = gets.chomp.downcase == 'y'
     student = Student.new(age, name, parent_permission: parent_permission)
-    people << student unless @people.include?(student)
+    @people.push(student)
   end
 
   def create_teacher
@@ -52,7 +52,7 @@ class App
     puts 'Name: '
     name = gets.chomp
     puts 'Do you have specialization[Y/N]: '
-    specialization = gets.chomp
+    specialization = gets.chomp.downcase == 'y'
     teacher = Teacher.new(age, specialization, name)
     people << teacher unless @people.include?(teacher)
   end
